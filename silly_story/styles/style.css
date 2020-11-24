@@ -1,0 +1,54 @@
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 153, 255, 0.733);
+    border: solid black 2px;
+    border-radius: 25px;
+}
+h1 {
+    color: chartreuse;
+    text-align:center;
+    font-family: 'Sansita Swashed',cursive;
+    font-size: 50px;
+    text-shadow: 5px 3px 1px black;
+}
+
+
+.story {
+    background-color: gold;
+    font-size: 25px;
+    background-image: linear-gradient(yellow,purple);
+    border-radius: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+#customname-label {
+    font-size: 20px;
+    font-weight: bold;
+}
+#uk-label,#metric-label {
+    font-size: 150%;
+    font-weight: bold;
+}
+#metric-radio, #uk-radio {
+    width: 20px;
+    height: 20px;
+}
+#customname {
+    height: 25px;
+    background-color: darkorange;
+}
+input[type='text'] {
+    font-size: 120%;
+    font: bold;
+    border-radius: 10px;
+}
+form  label {
+    color:red;
+}
+#customname:hover {
+    color:purple;
+}

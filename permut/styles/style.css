@@ -1,0 +1,21 @@
+body {
+    width: 500px;
+    border: 1px solid red;
+    background-color: rgb(170, 211, 142);
+    margin: auto;
+}
+
+
+.drawing {
+    display: flex;
+    justify-content: center;
+}
+
+.svg-area {
+    display: block;
+    border:1px solid rgb(45, 33, 204);
+    margin: 0 auto ;
+    background-color: pink;
+}
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Nasobilka</title>
+        <link href='./styles/style.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class='header'>
+            <img class='image' src='./images/multiplication.jpeg'>
+            <h1>Train your multiplication skills</h1>
+
+        </div>
+        <div class='range-selector'>
+            <h2>Select range to test</h2>
+            <form class='checkboxes row1'>
+                <label for='11'>11</label>
+                <input type="checkbox" id='11' value="11" checked>
+                <label for='12'>12</label>
+                <input type="checkbox" id='12' value="12">
+                <label for='13'>13</label>
+                <input type="checkbox" id='13' value="13">
+                <label for='14'>14</label>
+                <input type="checkbox" id='14' value="14">
+                <label for='15'>15</label>
+                <input type="checkbox" id='15' value="15">
+            </form>
+            <form class='checkboxes row2'>
+                <label for='16'>16</label>
+                <input type="checkbox" id='16' value="16">
+                <label for='17'>17</label>
+                <input type="checkbox" id='17' value="17">
+                <label for='18'>18</label>
+                <input type="checkbox" id='18' value="18">
+                <label for='19'>19</label>
+                <input type="checkbox" id='19' value="19">
+                <label for='20'>20</label>
+                <input type="checkbox" id='20' value="20">
+            </form>
+
+        </div>
+        <div class='testing-area'>
+            <div class='question'>
+            </div>
+                <label for = 'user-input'>Your answer: </label>
+                <input class='input-field' id = 'user-input' type='text'> 
+            <div class='evaluation-area'>Evaluation</div>
+        </div>
+       <script type='text/javascript' src='./scripts/main.js'></script> 
+    </body>
+</html>

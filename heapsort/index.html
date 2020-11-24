@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heap Sort</title>
+    <link rel='stylesheet' href='./styles/style.css'>
+</head>
+
+<body>
+    <script type='text/javascript'>
+        'use strict';
+
+        function Heap(arr) {
+            this.heap = arr;
+        }
+
+        Heap.prototype.sift = function(L, R) {
+        /* sift works from L to R trying to sift element form position L 
+        down way its tree path. Assumption is that HEAP IS ALREADY BUILT from L to R !
+        */
+            let arr = this.heap;
+            let i = L;
+            let x = arr[i];
+            let j = 2 * i + 1;
+            if ((j < R) && (arr[j + 1] > arr[j])) { // is there smaller neighbour element ?
+                j = j + 1;
+            }
+            while ((j <= R) && (arr[j] > x)) { // note we have to check boundaries against R
+                arr[i] = arr[j];
+                i = j;
+                j = 2*i+1;
+                if ((j < R) && (arr[j + 1] > arr[j])) {
+                    j = j + 1;
+                }
+                counter++;
+            }
+            arr[i]=x;
+        } 
+
+        Heap.prototype.buildHeap = function(){
+            let arr = this.heap;
+            let L = Math.floor(arr.length/2)-1; // calculate center index to start from
+            let R = arr.length-1;
+            while ( L >= 0) {
+                this.sift(L,R);
+                L--;
+            }
+        }
+
+        Heap.prototype.sortHeap = function() {
+            let arr = this.heap;
+            let L = 0;
+            let R = arr.length-1;
+            let tmp;
+            this.buildHeap(arr);
+            while ( R > 0) {
+                this.sift(L, R);
+                tmp = arr[0];
+                arr[0] = arr[R];
+                arr[R] = tmp;
+                R--;
+            }
+            console.log('Sorted array:');
+            return this.heap;
+        }
+        
+        let counter = 0;
+        let arr = [9,43, 12, 24, 129, 1, 8, 20, 50, 37, 11, 33];
+
+        console.log('Initial array:');
+        console.log(arr);
+        const heap = new Heap(arr);
+        console.log(heap.sortHeap());
+        console.log(`Swap count: ${counter}`);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin:auto;
+    background-color: antiquewhite;
+}
+
+
+.image {
+    display: block;
+    margin: auto;
+}
+
+h1  {
+    font-family: 'Nerko One', cursive;
+    font-weight: lighter;
+    color: blue;
+    text-align: center;
+}

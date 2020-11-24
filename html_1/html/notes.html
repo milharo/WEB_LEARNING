@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>ARCHIVACIA</title></head>
+<!--  $Revision: 1.52 $ -->
+<!--  $Date: 2008/10/11 22:04:09 $ -->
+<!--  $Author: noel $ -->
+<link href="nnnnnn.css" rel="stylesheet" type="text/css">
+<body>
+<div class="DocTitle">
+<h1>ARCHIVACIA</h1>
+</div>
+<div class="MainPage">
+<ol>
+<li  class="L1" >ARCHIVACNY PLAN -TYP DOKUMENTU   2020-05-02 12:29:46 <ol>
+<ol>
+<li  class="L3" >zaznamy-analyzy
+<li  class="L3" >video
+<li  class="L3" >zvuk
+<li  class="L3" >scan
+<li  class="L3" >foto
+<li  class="L3" >src
+<li  class="L3" >bin
+<li  class="L3" >script </ol>
+<li  class="L2" >ARCHIVACNY PLAN - TEMY   2020-04-27  18:27:41 <ol>
+<li  class="L3" >auto
+<li  class="L3" >banky
+<li  class="L3" >dane <ol>
+<li  class="L4" >miestne_poplatky
+<li  class="L4" >pracovne </ol>
+<li  class="L3" >dom
+<li  class="L3" >filmy
+<li  class="L3" >financie
+<li  class="L3" >fotky
+<li  class="L3" >hudba <ol>
+<li  class="L4" >modern
+<li  class="L4" >classic </ol>
+<li  class="L3" >knihy
+<li  class="L3" >nakupy <ol>
+<li  class="L4" >zarucne_listy
+<li  class="L4" >navody </ol>
+<li  class="L3" >osoby <ol>
+<li  class="L4" >veci
+<li  class="L4" >financie
+<li  class="L4" >zaznamy-analyzy-poznamky
+<li  class="L4" >filmy
+<li  class="L4" >hudba
+<li  class="L4" >video
+<li  class="L4" >zvuk </ol>
+<li  class="L3" >poistenia
+<li  class="L3" >praca
+<li  class="L3" >revizie <ol>
+<li  class="L4" >elektrika
+<li  class="L4" >plyn
+<li  class="L4" >komin
+<li  class="L4" >kotol </ol>
+<li  class="L3" >software <ol>
+<li  class="L4" >zdrojaky_skripty
+<li  class="L4" >firmware
+<li  class="L4" >aplikacie </ol>
+<li  class="L3" >telekom
+<li  class="L3" >ucty <ol>
+<li  class="L4" >uvery </ol>
+<li  class="L3" >videa <ol>
+<li  class="L4" >tutorialy
+<li  class="L4" >domace <ol>
+<li  class="L5" >svadba
+<li  class="L5" >udalosti
+<li  class="L5" >vylety
+<li  class="L5" >vyrocia </ol>
+</ol>
+</ol>
+</ol>
+<li  class="L1" >FINANCNE ZALEZITOSTI <ol>
+<li  class="L2" >hesla <ol>
+<p  class="P3" >pouzivam program keepassX s databazou ulozenou v DropBoxe. </p>
+</ol>
+<li  class="L2" >etfmatic <ol>
+<p  class="P3" >ucet je vedeny cez internet v anglicku </p>
+</ol>
+</ol>
+<li  class="L1" >PROGRAMOVANIE: <ol>
+<li  class="L2" >ASSERT(): <ol>
+<p  class="P3" >program najprv rob za predpokladu hlavneho modu operacie - bez
+specialnych pripadov, ci okrajovych pouzitie ASSERT je velmi
+uzitocnei, lebo moze zistit, ci nejaka premenna neuletela alebo
+dokonca ci nedochadza k prepisovaniu pamate pri preteceni indexov ako
+sa mi stalo pri 'towers of hanoi' kde bola TICHA chyba a pole islo uz
+nad alokovany index a prepisovalo maticu. Preto pri programovom
+pristupe k poliam pri vyvoji ASSERT na kontrolu zamyslanych limitov! </p>
+</ol>
+<li  class="L2" >WX widgets - kompilacia: <ol>
+<pre  class="PRE3" >options pre linkovanie ziskas spustenim: wx-config --libs
+potom kompilovat najprv: g++ -c zdroj.cpp +pridat tie kompilovacie options
+potom zlinkovat : g++ -o zdroj zdroj.o +pridat tie linkovacie options
+Este neviem ako sa to da nakonfigurovat napevno, aby som to nemusel pisat zakazdym do command line </pre>
+</ol>
+</ol>
+<li  class="L1" >UZITOCNE PRIKAZY: <ol>
+<li  class="L2" >Zamena CAPS-ESCAPE: <ol>
+<li  class="L3" >/usr/bin/setxkbmap -option "caps:swapescape" </ol>
+<li  class="L2" >Pre vypis CORE DUMP do aktualneho adresara exacu: <ol>
+<pre  class="PRE3" > echo "core.%e.%p" > /proc/sys/kernel/core_pattern
+</pre>
+<p  class="P3" >kde potom v nazve suboru bude: %e bude nazov exacu a %p pid procesu
+pre navrat do dummy modu, kde sa posle len dump na vstup programu specifikovany za "|":
+</p>
+<pre  class="PRE3" > echo "|/bin/false" > /proc/sys/kernel/core_pattern </pre>
+</ol>
+<li  class="L2" >Pre hladanie v Rutracker: <ol>
+<p  class="P3" >http://rutracker.org/forum/search_cse.php?q=programming+lua </p>
+</ol>
+</ol>
+<li  class="L1" >VIM: <ol>
+<li  class="L2" >Reformatovanie odstavca (wrapping): <ol>
+<p  class="P3" >vyznacit odstavec, co ma zaujima, potom prikaz 'gq' </p>
+</ol>
+<li  class="L2" >Zmena CASE daneho slova: <ol>
+<pre  class="PRE3" > slovo na alternative case g~ a movement
+ slovo na upper case gU a movement
+ slovo na lover case gu a movement (napr. w)
+ funguje aj ak sa vizual vyznaci a pot g prikaz </pre>
+</ol>
+<li  class="L2" >Tag list: <ol>
+<pre  class="PRE3" > TlistOpen </pre>
+</ol>
+</ol>
+<li  class="L1" >LINEARNA ALGEBRA <ol>
+<li  class="L2" >Eliminacna metoda: <ol>
+<p  class="P3" >Rovnice zapiseme v maticovom tvare ako: A x = b, kde A je matica z
+lavej strany bez premennych, x je stlpcovy vektor premennych, b je
+stlpcovy vektor pravej strany.  Pivoty su klucove prvky. Nikdy nemozu
+byt 0. Snazime sa vytvorit hornu diagonalnu maticu U postupnym
+nulovanim prvkov pred pivotmi zhora dole, tak ze zaciname druhym
+riadkom, od ktoreho odcitame vhodny nasobok prveho riadku, aby sme
+dostali v prvku 2,1 nulu.  Ak nie je vhodne matica usporiadana, mozeme
+prehodit riadky.  Na vyjadrenie postupu eliminacie sa pouziva tzv. E
+matica. Na pripadne prehadzovanie riadkov, ci stlpcov tzv. permutacna
+matica. Jednotlive eliminacne kroky sa daju zlucit do jednej
+elimninacnej matice ich nasobenim E3 E2 E1 = E, potom E A = U. </p>
+</ol>
+<li  class="L2" >Nasobenie matic - motivacia: <ol>
+<p  class="P3" >Motivacia na zavedenie nasobenia – vyjadrit premenne definovane lin.
+Kombinaciou inych premennych.  Napr. A :3x+2y = u, 5x-y = v, B: 7u – v
+= p, 2u + 3v=q –> ako vyjadrit p, q pomocou x, y ?  Po vyjadreni
+zistime, ze vysleok je akoby sa nasobila matica B*A. </p>
+</ol>
+<li  class="L2" >Nasobenie - zaujimavy postreh: <ol>
+<p  class="P3" >ak je pred maticou A matica V, cize V A tak jednotlive RIADKY matice V
+vyjadruju pozadovane linearne kombinacie jednotlivych riadkov matice
+A, ktore budu vo vysledku v prislusnom riadku, a ak je matica V za
+maticou A, cize A V tak jednotlive STLPCE matice V urcuju ake linearne
+kombinacie stlpcov matice A budu vo vyslednej matici na prislusnych
+stlpcovych poziciach. </p>
+</ol>
+<li  class="L2" >Realizacia nasobenia: <ol>
+<pre  class="PRE3" > prvkova definicia: A*B = SUM (Aij * Bji)
+ Na zaklade submatic: A * stlpce B
+ Na zaklade submatic: stlpce A * riadky B
+ Na zaklade submatic: riadky A * stlpce B
+ Na zaklade submatic riadky A * B </pre>
+</ol>
+</ol>
+<li  class="L1" >SYSTEMOVE PROGRAMOVANIE <ol>
+<li  class="L2" >BASIC TERMS: <ol>
+<li  class="L3" >OS: <ol>
+<p  class="P4" >OS is SW layer over HW providing 1) suitable HW abstraction
+for USER MODE programs 2) providing resource management
+(multiplexing, IPC…). OS runs in 'kernel mode' </p>
+</ol>
+<li  class="L3" >BIOS: <ol>
+<p  class="P4" >BIOS at start checks presence and status of basic HW (memory,
+disks, PCI..) then determines booting device and executes code
+from the first sector of the boot device. After that secondary
+boot loader is executed reading partition table etc… </p>
+</ol>
+<li  class="L3" >PROCESS: <ol>
+<p  class="P4" >PROCESS is a key concept of OS. Basically it is program in
+execution. </p>
+</ol>
+<li  class="L3" >PROCESS TABLE: <ol>
+<p  class="P4" >OS periodically stops and starts processes based on scheduler and
+stores its states in PROCESS TABLE. </p>
+</ol>
+<li  class="L3" >CORE IMAGE: <ol>
+<p  class="P4" >Suspended process consists of its address space called CORE IMAGE
+and its process table entry. </p>
+</ol>
+<li  class="L3" >SIGNAL HANDLING: <ol>
+<p  class="P4" >On receiving ALARM SIGNAL process can start special SIGNAL
+HANDLING procedure. </p>
+</ol>
+<li  class="L3" >VIRTUAL MEMORY: <ol>
+<p  class="P4" >Assigned to process as: base address + mem. block size, Managed by
+hardware. When process (using address from 0x0) instruction calls
+particular address it is translated by HW to physical address =
+process address + base and is compared to allocated size. If not
+matching - exeption is raised. </p>
+</ol>
+</ol>
+</ol>
+<li  class="L1" >ALGORITMY <ol>
+<li  class="L2" >Optimal search tree: <ol>
+<p  class="P3" >DOLEZITE je si uvedomit, ze kluce do opt. stromu sa zaradzuju ako
+usporiadane od najm. po najvacsi, cize vychodisko je sada klucov ki kde
+0<i<=n , sada frekvencii hladania jednotlivych klucov pi a sada frekvencie
+hladania 'medziklucov' teda hodnot, pre ktore kluce v strome nie su, no
+tieto hodnoty musia z principu lezat medzi dvomi susediacimi klucmi.
+Specialne je zavedena konvencia pre hodnoty < k1 (su to vsetky hodnot
+-nekonecno a frekvencia ich) hladania sa oznacuje q0  a pre hodnoty > kn
+sa frekvencia hladania oznacuje qn.
+jednotlivy podstrom Tij obsahuje kluce i< k <= j, frekvencie vyskytu
+klucov pj kde i < j <= n, a frekvencie vyskytu 'medziuzlov' teda klucov
+nevyskytujucich sa v strome qj kde 0<= j<= n; medziuzly su vlastne nulove
+uzly, cize im patria podstromom Tij kde j-i = 0.  Samotne uzly s
+existujucimi klucmi k patria podstromom Tij, kde j-i = 1.  Podstromy Tij
+kde j-i > 1 su uz skupiny uzlov s poctom uzlov rovnym j-i.  Pri budovani
+Optimal Search tree ide o to urcit root r<img src="i,j" alt="i,j"> celeho stromu.  K tomu sa
+dopracujeme hladanim stromu s minimalnou vahou, cize min.sum ( pi * hi +
+qi * hi, kde hi je uroven (level) uzla v danom strome. Kedze vaha celeho
+stromu sa sklada z vah jednotlivych podstromov, ktore KED SA PRIDAVAJU do
+vacsieho stromu (ako strom rastie) tak zaciname od podstromov s rozmerom
+j-i= 0 az dojdeme k stromu s rozmerom j-i = n.  Klucove su vztahy C<img src="i,j" alt="i,j"> =
+min {C<a href="i,">k-1</a> + C<a href="k,">j</a>} + Wij, kde i<k<=j a W<img src="i,j" alt="i,j"> = W<img src="i,j-1" alt="i,j-1"> + pj + qj.
+Ked mame root r<img src="0,n" alt="0,n"> tak od neho mozme zacat konstruovat cely strom tak,
+ze cislo rootu r je vlastne poradove </p>
+</ol>
+<li  class="L2" >B-Tree: <ol>
+<p  class="P3" >VKLADANIE (INSERT) nie je az take zaludne ako mazanie. Priznak h=1
+znamena, ze doslo k preplneniu (overflow) stranky pod parentom, v
+premennej 'u' bude ulozeny kluc, ktory je posielany hore ako
+prebytocny (obycajne stredny element z preplnenej stranky, alebo
+povodny kluc ak sme dosli do externeho nodu (pg == NULL).
+MAZANIE (DELETE) si vytvorit helper funkciu 'reballance' co sa postara
+o vsetky varianty co mozu nastat pri potrebe rebalancu (underflow je
+indikovany h = 1). Pri overovani hranic pageov treba overovat index
+voci platnemu poctu itemov v stranke (nestaci len voci
+0 a max size (ako 2*grade) a pod. </p>
+</ol>
+</ol>
+<li  class="L1" >HTML <ol>
+<li  class="L2" >Elementy: <ol>
+<p  class="P3" >opening tag - content - closing tag = element. Rozoznavame INLINE a
+BLOCK element. Inline si nevytvara samostatny blok na stranke, ani
+nesposobuje skok na novu linu ako block element.
+Potom su elementy tzv. Empty ktore nemaju Content cast - ako <img source=..>.
+Tieto sa vascinou pouzivaju na vkladanie nejakeho obsahu do stranky.
+</p>
+<p  class="P3" > </ol>
+</ol>
+</ol>
+</div>
+<div class="Footer">
+<hr>
+
+<br>
+/home/milhar/Programming/notes.otl&nbsp&nbsp 2020/10/09 19:23
+</div>
+</body></html>

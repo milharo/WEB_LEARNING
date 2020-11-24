@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Silly story</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet">
+        <link href='styles/style.css' rel='stylesheet'>
+        <script src="scripts/main.js" type="text/javascript" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Silly story</h1>
+        <label id='customname-label' for='customname'><b>Enter custom name:</b></label>
+        <input id='customname' type="text">
+
+        <form>
+            <label id='uk-label' for='uk-radio' >UK</label>
+            <input id='uk-radio' type="radio" name='metric-system' checked><br>
+            <label id='metric-label' for='metric-radio'>METR</label>
+            <input id='metric-radio' type="radio" name='metric-system'>
+        </form>
+
+        <br>    
+        <input type="button" id='randomize' value='Generate random story'>
+        <hr>
+        <p class='story'></p>
+        <p id='skovaj-sa'>Nieco usmevne</p>
+        <script>
+        $(document).ready(function(){
+            $("#skovaj-sa").click(function(){
+              $(this).hide();
+            });
+          });
+        $(document).ready(function() {
+            $('.story').click(function(){
+            $("#skovaj-sa").show();
+            });
+        });
+        
+          </script>
+
+
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>HTML-1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+    </head>
+    <body >
+        <img src='images/mountain-baloon.jpg' class='center-image' alt='mountain-baloon'>
+        <div class='content'>
+        <p>
+            <h1 >Hello there!</h1>
+        </p>    
+            <h2>Lorem Ipsum</h2>
+        <p>Sed ut perspiciatis, unde omnis iste natus error
+            sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa,
+            quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt,
+            explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit,
+            sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est
+        </p> 
+
+        </div>
+            <label for='myFile'>Ta vyber ši fajloš!<br></label>
+                 <input type='file' id='myFile' name='myFile' onchange="readFile(this)">
+                 <br>
+
+                 <button id='machine-button'>Start the machine</button>
+                 <p id='machine-status'>Machine is stopped</p>
+                 <button id='name-button'>Click me</button>
+
+                 <label id='vstup-label' for='vstup'>Zadanie:</label>
+                 <input id='vstup' type='text'>
+                 <label id ='vystup-label' for='vystup'>Vysledok:</label>
+                 <input id='vystup' type='text'>
+
+
+                 
+
+        <script src='scripts/main.js'></script>
+                 
+    </body>
+</html>

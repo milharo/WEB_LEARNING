@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Permut</title>
+    </head>
+    <body>
+        <script type='text/javascript'>
+        'use strict';
+        const o = {
+            a1:1,
+            a2:2,
+            a3:3,
+        };
+
+
+        let arr = [1,2,3,4];
+        let cnt = 0;
+        function permute(n, arr) {
+            if (n < 1) {
+                return arr;
+            }
+            for (let i=0; i < n; i++) {
+                swap(n-1-i, n-1, arr);
+                if (n == 1) {
+                console.log(arr);
+                cnt++;
+                }
+                permute(n-1, arr);
+                swap(n-1-i, n-1, arr);
+            }
+        }
+        function swap(high, low, arr) {
+            if ( (low) < 0) { 
+                return;
+            }
+            let tmp;
+            tmp = arr[high];
+            arr[high] = arr[low];
+            arr[low] = tmp;
+            return arr;
+        }
+        permute(arr.length, arr);
+        console.log(cnt+" permutations");
+
+
+        </script>
+
+    </body>
+</html>
