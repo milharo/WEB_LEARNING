@@ -2,7 +2,6 @@
 
 function getRandom() {
     let multiplier = 10 + (Math.ceil(10*Math.random())); // generate 11 to 20
-    //let multiplier = 1+(Math.ceil(10*Math.random()))%5; // generate 11 to 20
     return multiplier;
 }
 
@@ -12,16 +11,16 @@ function generateQuestion(ranges) {
     let multiplier2 = ranges[index-1]; 
     questionElement.textContent=`What is: ${multiplier1} x ${multiplier2} ?`;
     let question = multiplier1 * multiplier2;
-    return question;
+    return [question, multiplier1, multiplier2];
 }
 
 function evalReply(reply) {
-    if ( reply == question) {
+    if ( reply == question[0]) {
         evaluationElement.textContent='GOOD';
         console.log('Good');
     }
     else { 
-        evaluationElement.textContent = `WRONG, it is: ${question}`;
+        evaluationElement.textContent = `WRONG, ${question[1]} x ${question[2]} is: ${question[0]}`;
         console.log('Wrong');
     }
 
@@ -67,26 +66,6 @@ userInput.addEventListener('keydown', (e) => {
                                 console.log('Zadal si: ' + val);
                                 evalReply(val);
                                 userInput.value ='';
-                                userInput.focus();
                                 question = generateQuestion(ranges);
                             }
                         });
-
-                
-                                
-
-
-// generate question
-/*
-- pick random range
-- pick random from 11-20 and multiply by range
-- display question
-*/
-
-// process input
-/* 
-- attach return event listener on input text field
-- process value from input
-- evaluate input and display correct result in case of NG
-- clear input and focus for next question
-*/
