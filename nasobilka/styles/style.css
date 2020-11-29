@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+html {
+    background-color: white;
+}
 
 body {
     width: 80%;
@@ -8,15 +11,45 @@ body {
     background-color: antiquewhite;
 }
 
-
 .image {
     display: block;
     margin: auto;
 }
+
 
 h1  {
     font-family: 'Nerko One', cursive;
     font-weight: lighter;
     color: blue;
     text-align: center;
+    background-color: yellow;
+    border: 1px solid red;
+}
+
+
+.input-field {
+    width: 3em;
+}
+
+.correct {
+    background-color: greenyellow;
+    font-weight: bold;
+}
+.wrong {
+    background-color: orangered;
+    font-weight: bold;
+}
+
+.checkboxes label {
+    font-weight: bold;
+}
+
+.warning  {
+    visibility: hidden;
+    color: red;
+}
+
+.warning.show  {
+    visibility: visible;
+    color: red;
 }
