@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 
-<html>
+<html lang='en'>
     <head>
         <title>Nasobilka</title>
+        <meta charset='UTF-8'>
         <link href='./styles/style.css' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+        <script src="vendor/jquery-3.5.1.js"></script>
     </head>
     <body>
         <div class='header'>
@@ -14,6 +16,7 @@
         </div>
         <div class='range-selector'>
             <h2>Select range to test</h2>
+            <div class='warning'>At least one multiplier must be selected!</div>
             <form class='checkboxes row1'>
                 <label for='11'>11</label>
                 <input type="checkbox" id='11' value="11" checked>
@@ -43,8 +46,8 @@
         <div class='testing-area'>
             <div class='question'>
             </div>
-                <label for = 'user-input'>Your answer: </label>
-                <input class='input-field' id = 'user-input' type='text'> 
+                <label class='input-label' for= 'user-input'>Your answer: </label>
+                <input class='input-field' id = 'user-input' type='text' autocomplete='off'> 
             <div class='evaluation-area'>Evaluation</div>
         </div>
        <script type='text/javascript' src='./scripts/main.js'></script> 
